@@ -1,21 +1,34 @@
 # OfflineXyz Android APK
 
-This repository now contains a minimal Android app skeleton for building an APK.
+This repository contains a minimal Android app skeleton for building an APK.
 
-## Build Debug APK
+## Kya external software chahiye?
 
-1. Install Android SDK (platform 34) and JDK 17.
-2. Add `local.properties` with:
+Haan, **minimum** ye chahiye:
+1. **JDK 17**
+2. **Android SDK (API 34 + Build-Tools)**
+
+Optional (easy setup ke liye):
+- **Android Studio** (SDK manage karne ke liye convenient)
+
+Not required:
+- Alag se Kotlin install nahi chahiye.
+- Alag se Android NDK nahi chahiye.
+
+## Build Debug APK (Local Machine)
+
+1. Android SDK install karo (platform 34) aur JDK 17 set karo.
+2. Project root me `local.properties` banao:
    ```
    sdk.dir=/path/to/Android/Sdk
    ```
-3. Run:
+3. Build command run karo:
    ```bash
-   ./gradlew assembleDebug
+   gradle assembleDebug
    ```
-4. APK output:
+4. APK output path:
    `app/build/outputs/apk/debug/app-debug.apk`
 
 ## Current behavior
-- Opens online URL when internet is available.
-- Opens bundled offline page when internet is unavailable.
+- Internet available: app online URL open karti hai.
+- Internet unavailable: app bundled offline page open karti hai.
