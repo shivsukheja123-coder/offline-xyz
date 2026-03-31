@@ -32,3 +32,14 @@ Not required:
 ## Current behavior
 - Internet available: app online URL open karti hai.
 - Internet unavailable: app bundled offline page open karti hai.
+
+## Zero local setup (GitHub Actions)
+
+Agar aap bina local software install kiye APK banana chahte ho, to ye repo mein workflow add hai:
+- `.github/workflows/android-apk.yml`
+
+### Kaise use karein
+1. Repo ko GitHub par push karo.
+2. **Actions** tab open karo.
+3. **Build Android APK** workflow run karo (manual `workflow_dispatch` se).
+4. Run complete hone ke baad **Artifacts** se `app-debug-apk` download karo.
